@@ -57,3 +57,22 @@ direction TB
 Computadora *-- PlacaBase : tiene
 Computadora o-- Raton : tiene
 ```
+
+## Ejercicio 4:
+
+```mermaid
+classDiagram
+direction TB
+
+    class CentroComercial {
+        - nombre : String
+        - direccion : String
+    }
+
+    class Tienda {
+        - nombre : String
+        - tipo_tienda : String
+    }
+
+CentroComercial *-- Tienda : alberga 1..*
+```
