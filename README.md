@@ -20,15 +20,40 @@ direction TB
 classDiagram
 direction TB
 
-class Persona {
-    # nombre : String
-    # dni : String
-}
+    class Persona {
+        # nombre : String
+        # dni : String
+    }
 
-class Estudiante {
-    - numeroExpediente() int
-    - notaMedia() double
-}
+    class Estudiante {
+        - numeroExpediente() int
+        - notaMedia() double
+    }
 
 Estudiante --|> Persona
+```
+
+## Ejercicio 3:
+
+```mermaid
+classDiagram
+direction TB
+
+    class Computadora {
+        - placaBase : PlacaBase
+        - raton : Raton
+    }
+
+    class PlacaBase {
+        - nombre : String
+        - modelo : String
+    }
+
+    class Raton {
+        - nombre : String
+        - marca : String
+    }
+
+Computadora *-- PlacaBase : tiene
+Computadora o-- Raton : tiene
 ```
