@@ -18,7 +18,7 @@ direction TB
 
 ```mermaid
 classDiagram
-direction TB
+direction BT
 
     class Persona {
         # nombre : String
@@ -74,5 +74,34 @@ direction TB
         - tipo_tienda : String
     }
 
-CentroComercial *-- Tienda : alberga 1..*
+CentroComercial "1" *-- "1..*" Tienda : alberga
 ```
+
+## Ejercicio 5:
+
+```mermaid
+classDiagram
+direction TB
+
+    class MetodoPago {
+        <<interface>>
+        + procesar(double importe) boolean
+    }
+
+    class Tarjeta {
+        + procesar(double importe) boolean
+    }
+
+    class Paypal {
+        + procesar(double importe) boolean
+    }
+
+    class Carrito {
+        + pagar(MetodoPago miMetodo) void
+    }
+
+MetodoPago <|.. Tarjeta
+MetodoPago <|.. Paypal
+Carrito ..> MetodoPago : usa
+```
+    
