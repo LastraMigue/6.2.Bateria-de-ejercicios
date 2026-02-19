@@ -9,8 +9,8 @@ direction TB
         - nombre : String
         - contraseña : String
         + correo : String
-        + cambiarPassword(nueva : String) : void
-        - validarEmail() : boolean
+        + cambiarPassword(nueva : String) void
+        - validarEmail() boolean
     }
 ```
 
@@ -26,8 +26,8 @@ class Persona {
 }
 
 class Estudiante {
-    - numeroExpediente() : int
-    - notaMedia() : double
+    - numeroExpediente() int
+    - notaMedia() double
 }
 
 Estudiante --|> Persona
